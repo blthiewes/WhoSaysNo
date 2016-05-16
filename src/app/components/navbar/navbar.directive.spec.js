@@ -12,7 +12,7 @@
     var el;
     var timeInMs;
 
-    beforeEach(module('untitled3'));
+    beforeEach(module('WhoSaysNo'));
     beforeEach(inject(function($compile, $rootScope) {
       // spyOn(_$window_, 'moment').and.callThrough();
       // $window = _$window_;

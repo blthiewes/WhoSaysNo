@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('untitled3')
+    .module('WhoSaysNo')
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */

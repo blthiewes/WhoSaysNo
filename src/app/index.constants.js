@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('untitled3')
+    .module('WhoSaysNo')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 

@@ -1,26 +1,36 @@
-<div layout="vertical" layout-fill>
+<div layout="vertical" layout-align="center" layout-fill ng-controller="MainController">
 
-  <md-content>
+  <md-content flex>
     <header>
       <acme-navbar></acme-navbar>
     </header>
 
     <section class="jumbotron">
       <h1>Who Says No?</h1>
-
+      <h4>A Dynasty Fantasy Football League</h4>
     </section>
 
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-        <md-card-content>
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <h3 class="md-title">{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-        </md-card-content>
-        <div class="md-action-buttons">
-          <md-button ng-href="{{ awesomeThing.url }}">Website</md-button>
+    <button class="md-icon-button md-button md-ink-ripple hide-gt-sm" type="button" ng-click="main.toggleLeft()"
+            hide-gt-md aria-label="Toggle Menu">
+      <i class="material-icons md-48">view_headline</i>
+    </button>
+
+    <div class="techs" layout="row">
+      <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-21dp" md-is-locked-open="$mdMedia('gt-sm')" flex>
+        <md-list>
+          <md-list-item ng-repeat="team in main.teams | orderBy:'title'">
+            <md-button class="md-raised" flex ng-click="main.selectTeam(team)">
+             {{ team.title }}
+              ({{ team.description }})
+            </md-button>
+          </md-list-item>
+        </md-list>
+      </md-sidenav>
+      <md-content flex>
+        <div layout="row" layout-align="center" layout-fill>
+          {{main.selectedTeam.title}}
         </div>
-      </md-card>
+      </md-content>
     </div>
   </md-content>
 

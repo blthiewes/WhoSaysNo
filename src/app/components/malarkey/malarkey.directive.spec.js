@@ -12,7 +12,7 @@
     var vm;
     var el;
 
-    beforeEach(module('untitled3'));
+    beforeEach(module('WhoSaysNo'));
     beforeEach(inject(function($compile, $rootScope, githubContributor, $q, _$log_) {
       $log = _$log_;
 
