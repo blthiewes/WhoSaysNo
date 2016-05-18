@@ -19,6 +19,12 @@
         templateUrl: 'app/rules/rules.html',
         controller: 'RulesController',
         controllerAs: 'rules'
+      })
+      .state('history', {
+        url: '/history',
+        templateUrl: 'app/history/history.html',
+        controller: 'HistoryController',
+        controllerAs: 'history'
       });
 
     $urlRouterProvider.otherwise('/');
