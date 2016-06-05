@@ -1,0 +1,13 @@
+<div class="row text-center">
+    <div class="col-xs-12">
+        <h2>2016 Draft Picks</h2>
+    </div>
+    <div ng-repeat="draftPick in draftPicks">
+        <div class="col-xs-6 text-right">
+            {{draftPick.pick}}.
+        </div>
+        <div class="col-xs-6 text-left">
+            {{draftPick.owner}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="row text-center">
+    <div class="col-xs-12">
+        <h2>Championships</h2>
+    </div>
+    <div ng-repeat="champion in championships  | orderBy: '-year' ">
+        <div class="col-xs-6 text-right">
+            <i class="fa fa-trophy gold" aria-hidden="true"></i> &nbsp;{{champion.year}}
+        </div>
+        <div class="col-xs-6 text-left">
+            {{champion.owner}}
+        </div>
+    </div>
+</div>
