@@ -7,7 +7,9 @@
         $scope.championships = [
             {"year":2013, "owner":'Matt Neu'},
             {"year":2014, "owner":'Matt Neu'},
-            {"year":2015, "owner":'Kyle Beck'}
+            {"year":2015, "owner":'Kyle Beck'},
+            {"year":2016, "owner":'Kyle Beck'},
+            {"year":2017, "owner":'Kyle Beck'}
         ];
     }]);
 })();
